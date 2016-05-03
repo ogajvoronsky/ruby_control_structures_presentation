@@ -61,6 +61,12 @@ if languahe == 'Ruby' [then]
   'awesome'
 end
 					</code></pre>
+					<p align="left">Several conditions case</p>
+					<pre><code>
+if languahe == 'Ruby' && framework == 'Ruby on Rails' [then]
+  'awesome'
+end
+					</code></pre>
 					<p>Short syntax</p>
 					<pre><code>
 'awesome' if languahe == 'Ruby'
@@ -150,17 +156,15 @@ end
 				<section>
 					<h2>Loops & Iterators</h2>
 					<p align="left">Loops are blocks of program that are executed multiple times.</p>
-					<ul>
-						<li class="fragment highlight-current-blue">Loop</li>
-						<li class="fragment highlight-current-blue">While</li>
-						<li class="fragment highlight-current-blue">Until</li>
-						<li class="fragment highlight-current-blue">For ... in</li>
-						<li class="fragment highlight-current-blue">Break, next, redo statements</li>
-						<li class="fragment highlight-current-blue">Upto</li>
-						<li class="fragment highlight-current-blue">Times</li>
-						<li class="fragment highlight-current-blue">Step</li>
-						<li class="fragment highlight-current-blue">Each</li>
-						<li class="fragment highlight-current-blue">Map</li>
+					<ul style="font-size: 28px;">
+						<li class="fragment grow highlight-current-blue">Loop</li>
+						<li class="fragment grow highlight-current-blue">While</li>
+						<li class="fragment grow highlight-current-blue">Until</li>
+						<li class="fragment grow highlight-current-blue">For ... in</li>
+						<li class="fragment grow highlight-current-blue">Upto</li>
+						<li class="fragment grow highlight-current-blue">Times</li>
+						<li class="fragment grow highlight-current-blue">Step</li>
+						<li class="fragment grow highlight-current-blue">Each</li>
 					</ul>
 				</section>
 
@@ -176,63 +180,87 @@ loop do
 				<section>
 					<h3>While</h3>
 					<pre><code>
-
+i = 0
+while i < 10 do
+  print i
+  i += 1
+end
+					</code></pre>
+					<p>Short syntax</p>
+					<pre><code>
+i = 200
+i -= 10 while i >= 100
 					</code></pre>
 				</section>
 
 				<section>
 					<h3>Until</h3>
 					<pre><code>
-
+i = 0
+until i >= 10 do
+  print i
+  i += 1
+end
+					</code></pre>
+					<p>Short syntax</p>
+					<pre><code>
+i = 200
+i -= 10 until i < 100
 					</code></pre>
 				</section>
 
 				<section>
 					<h3>For ... in</h3>
 					<pre><code>
-
+for i in 1..5
+  print i, ' '
+end
 					</code></pre>
 				</section>
 
 				<section>
 					<h3>Break, next, redo statements</h3>
+					<ul>
+						<li>Break terminates the immediately enclosing loop.</li>
+						<li>Next skips to the end of the loop, effectively starting the next iteration.</li>
+						<li>Redo repeats the current iteration of the loop from the start.</li>
+					</ul>
 					<pre><code>
-
+i=0
+loop do
+  i += 1
+  next if i < 3
+  print i
+  break if i > 4
+end
 					</code></pre>
 				</section>
 
 				<section>
 					<h3>Upto</h3>
 					<pre><code>
-
+0.upto(9) { |x| print x, ' ' } => "0 1 2 3 4 5 6 7 8 9 "
 					</code></pre>
 				</section>
 
 				<section>
 					<h3>Times</h3>
 					<pre><code>
-
+3.times { print 'Ho ' } => "Ho Ho Ho "
 					</code></pre>
 				</section>
 
 				<section>
 					<h3>Step</h3>
 					<pre><code>
-
+0.step(12, 3) { |x| print x, ' ' } => "0 3 6 9 12 "
 					</code></pre>
 				</section>
 
 				<section>
 					<h3>Each</h3>
 					<pre><code>
-
-					</code></pre>
-				</section>
-
-				<section>
-					<h3>Map</h3>
-					<pre><code>
-
+[1, 2, 3, 5, 10].each { |n| print n, ' ' } => "1 2 3 5 10 "
 					</code></pre>
 				</section>
 
